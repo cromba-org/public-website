@@ -13,8 +13,8 @@
           class="text-block"
         />
         <div class="buttons">
-          <ActionButton :label="'Whitepaper'" />
-          <ActionButton :label="'Contract'" />
+          <ActionButton :label="'WHITEPAPER'" />
+          <ActionButton :label="'CONTRACT'" />
         </div>
       </div>
       <div class="right-section">
@@ -104,9 +104,6 @@ export default {
           border: 1.5px solid #ffffff;
           box-sizing: border-box;
           border-radius: 12px;
-          &:first-child{
-            text-transform: capitalize;
-          }
         }
       }
     }
