@@ -2,6 +2,7 @@
   <div id="app">
     <Introduction />
     <Lan />
+    <AboutCromba />
   </div>
 </template>
 
