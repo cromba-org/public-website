@@ -4,6 +4,7 @@
     <Lan />
     <AboutCromba />
     <Features />
+    <EcoSystem />
   </div>
 </template>
 
