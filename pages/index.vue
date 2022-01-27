@@ -3,6 +3,7 @@
     <Introduction />
     <Lan />
     <AboutCromba />
+    <Features />
   </div>
 </template>
 
