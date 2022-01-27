@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import HeadingBlock from "~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue";
+import HeadingBlock from '~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue'
 export default {
-    components: { HeadingBlock }
+  components: { HeadingBlock },
 }
 </script>
 
@@ -25,6 +25,7 @@ export default {
     font-family: Raleway;
     font-size: 36px;
     color: white;
+    margin-bottom: 40px;
   }
 }
 </style>
