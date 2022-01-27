@@ -6,6 +6,7 @@
     <Features />
     <EcoSystem />
     <DistributionPlan />
+    <TimeLine />
   </div>
 </template>
 
