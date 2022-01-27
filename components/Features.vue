@@ -63,6 +63,10 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url('../assets/bg-get-started.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   .title {
     color: white;
     margin-bottom: 40px;

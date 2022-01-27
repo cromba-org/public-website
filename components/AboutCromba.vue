@@ -69,10 +69,6 @@ export default {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background-image: url('../assets/bg-get-started.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   .left-section {
     width: 50%;
     height: 100%;
