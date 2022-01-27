@@ -39,13 +39,14 @@ export default {
 }
 </script>
 
-<style  scoped lang="scss">
+<style scoped lang="scss">
 .container {
   background-image: url('../assets/bg-above-the-fold.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 900px;
+  width: 100%;
   .introduction {
     display: flex;
     flex-direction: row;
