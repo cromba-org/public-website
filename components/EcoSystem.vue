@@ -13,7 +13,9 @@
         </div>
       </div>
     </div>
-    <img class="image" src="../assets/social-networks.svg" />
+    <div class="image-container">
+      <img class="image" src="../assets/social-networks.svg" />
+    </div>
   </div>
 </template>
 
@@ -52,7 +54,7 @@ export default {
           items: [
             'Network Ownership',
             'DAO Ownership',
-            'Verfication Contribution'
+            'Verfication Contribution',
           ],
         },
       ],
@@ -113,11 +115,13 @@ export default {
       }
     }
   }
-  .image {
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    margin-top: 200px;
+  .image-container {
+    margin: 50px;
+    .image {
+      margin-top: 50px;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>

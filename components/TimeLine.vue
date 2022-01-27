@@ -19,13 +19,16 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px;
   .title {
     font-family: Raleway;
     font-size: 36px;
     color: white;
     margin-bottom: 40px;
+  }
+  .image {
+    width: 100%;
+    height: 100%;
   }
 }
 </style>
