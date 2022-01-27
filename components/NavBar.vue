@@ -30,7 +30,6 @@ export default {
   align-items: center;
   padding: 0 20px;
   height: 90px;
-  background-color: #11011e;
   .logo {
     width: 150px;
     height: 100%;
