@@ -116,7 +116,7 @@ export default {
     }
   }
   .image-container {
-    margin: 50px;
+    margin: 100px;
     .image {
       margin-top: 50px;
       width: 100%;
