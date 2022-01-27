@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
-    <div class="text-container">
-      <HeadingBlock class="title" :text="'LAN'" />
-      <TextBlock
-        :text="'A big social media provider disclosed Lan’s IP address and other information to a government non tolerable for free speech, she needs a safer social not dependent on companies with government relations.'"
-        class="text"
-      />
+  <div class="background">
+    <div class="container">
+      <div class="text-container">
+        <HeadingBlock class="title" :text="'LAN'" />
+        <TextBlock
+          :text="'A big social media provider disclosed Lan’s IP address and other information to a government non tolerable for free speech, she needs a safer social not dependent on companies with government relations.'"
+          class="text"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +22,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.background {
+  background-image: url('../assets/bg-features.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
 .container {
   width: 100%;
   text-align: center;
