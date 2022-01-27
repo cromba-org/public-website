@@ -8,6 +8,7 @@
     <DistributionPlan />
     <TimeLine />
     <JoinUs />
+    <OurTeam />
   </div>
 </template>
 
