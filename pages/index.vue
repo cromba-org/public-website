@@ -9,6 +9,7 @@
     <TimeLine />
     <JoinUs />
     <OurTeam />
+    <Footer />
   </div>
 </template>
 
