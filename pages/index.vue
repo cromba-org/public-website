@@ -5,6 +5,7 @@
     <AboutCromba />
     <Features />
     <EcoSystem />
+    <DistributionPlan />
   </div>
 </template>
 
