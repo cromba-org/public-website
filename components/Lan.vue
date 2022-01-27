@@ -23,7 +23,7 @@ export default {
 .container {
   width: 100%;
   text-align: center;
-  background-image: url('../assets/Group1574.svg');
+  background-image: url('../assets/Lan.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
