@@ -6,48 +6,44 @@
         :src="card.image"
         :style="{ backgroundImage: `url('${card.background}')` }"
       />
-      <HeadingBlock class="card-title" :heading-level="3" :text="card.title" />
-      <TextBlock
-        class="card-subtitle"
-        :heading-level="3"
-        :text="card.subtitle"
-      />
+      <ZekHeading class="card-title" :heading-level="3" :text="card.title" />
+      <ZekText class="card-subtitle" :heading-level="3" :text="card.subtitle" />
     </div>
   </div>
 </template>
 
 <script>
-import HeadingBlock from '~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue'
-import TextBlock from '~/../zekoder-web-components/src/components/text-block/TextBlock.vue'
+import { ZekHeading, ZekText } from "@zekoder/zekoder-web-components";
+
 export default {
-  components: { HeadingBlock, TextBlock },
+  components: { ZekHeading, ZekText },
   data() {
     return {
       cards: [
         {
-          image: require('../assets/ahmed-sheleby.svg'),
-          title: 'Ahmed Shalaby',
+          image: "../assets/ahmed-sheleby.svg",
+          title: "Ahmed Shalaby",
           subtitle:
-            '20 years experience in technolgy nitch and also a co-founder of various firms in Canada, Us, Turkey and Egypt.',
-          background: require('../assets/image-frame.svg'),
+            "20 years experience in technolgy nitch and also a co-founder of various firms in Canada, Us, Turkey and Egypt.",
+          background: "../assets/image-frame.svg",
         },
         {
-          image: require('../assets/mohamed-hany.svg'),
-          title: 'Mohamed Hany',
+          image: "../assets/mohamed-hany.svg",
+          title: "Mohamed Hany",
           subtitle:
-            '6 years experience as a DevOps and full stack software engineer',
-          background: require('../assets/image-frame-2.svg'),
+            "6 years experience as a DevOps and full stack software engineer",
+          background: "../assets/image-frame-2.svg",
         },
         {
-          image: require('../assets/mohamed-ali.svg'),
-          title: 'Mohamed Ali',
-          subtitle: '5 years experience in marketing and business development',
-          background: require('../assets/image-frame-3.svg'),
+          image: "../assets/mohamed-ali.svg",
+          title: "Mohamed Ali",
+          subtitle: "5 years experience in marketing and business development",
+          background: "../assets/image-frame-3.svg",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

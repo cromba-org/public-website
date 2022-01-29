@@ -3,18 +3,18 @@
     <NavBar />
     <div class="introduction">
       <div class="left-section">
-        <HeadingBlock
+        <ZekHeading
           :text="'Cromba is open source for the free world'"
           class="heading-block"
         />
-        <TextBlock
+        <ZekText
           :text="'Cromba is not another fancy blockchain project, Cromba is a social network project that uses blockchain among other technologies'"
           :line-breaks="2"
           class="text-block"
         />
         <div class="buttons">
-          <ActionButton :label="'WHITEPAPER'" />
-          <ActionButton :label="'CONTRACT'" />
+          <ZekButton :label="'WHITEPAPER'" />
+          <ZekButton :label="'CONTRACT'" />
         </div>
       </div>
       <div class="right-section">
@@ -25,23 +25,21 @@
 </template>
 
 <script>
-import TextBlock from '../../zekoder-web-components/src/components/text-block/TextBlock.vue'
-import HeadingBlock from '../../zekoder-web-components/src/components/heading-block/HeadingBlock.vue'
-import ActionButton from '../../zekoder-web-components/src/components/action-button/ActionButton.vue'
+import { ZekHeading, ZekText, ZekButton } from "@zekoder/zekoder-web-components";
 
 export default {
-  name: 'IntroductionBlock',
+  name: "IntroductionBlock",
   components: {
-    TextBlock,
-    ActionButton,
-    HeadingBlock,
+    ZekText,
+    ZekButton,
+    ZekHeading,
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
 .container {
-  background-image: url('../assets/bg-above-the-fold.png');
+  background-image: url("../assets/bg-above-the-fold.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <HeadingBlock class="title" :text="'Ecosystem'" />
+    <ZekHeading class="title" :text="'Ecosystem'" />
     <div class="rows">
       <div v-for="(row, i) in rows" :key="i" class="row">
-        <HeadingBlock class="row-title" :text="row.label" />
+        <ZekHeading class="row-title" :text="row.label" />
         <div v-for="(item, j) in row.items" :key="j" class="row-item">
-          <HeadingBlock
+          <ZekHeading
             class="item-text"
             :text="item"
             :style="{ color: row.color }"
@@ -20,47 +20,47 @@
 </template>
 
 <script>
-import HeadingBlock from '~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue'
+import { ZekHeading } from "@zekoder/zekoder-web-components";
 export default {
-  components: { HeadingBlock },
+  components: { ZekHeading },
   data() {
     return {
       rows: [
         {
-          label: 'EARN',
-          color: '#a6ce39',
+          label: "EARN",
+          color: "#a6ce39",
           items: [
-            'Appreciated Owned Content',
-            'Social Network Enriching Activities',
-            'Verification (mining)',
-            'Digital Product Sales',
-            'Infrastructure Provision',
-            'Crypto Exchange',
+            "Appreciated Owned Content",
+            "Social Network Enriching Activities",
+            "Verification (mining)",
+            "Digital Product Sales",
+            "Infrastructure Provision",
+            "Crypto Exchange",
           ],
         },
         {
-          label: 'SPEND',
-          color: '#00AEEF',
+          label: "SPEND",
+          color: "#00AEEF",
           items: [
-            'Content Application',
-            'Infrastructure Utilization',
-            'Advertisment',
-            'Digital Product Purchase',
+            "Content Application",
+            "Infrastructure Utilization",
+            "Advertisment",
+            "Digital Product Purchase",
           ],
         },
         {
-          label: 'STAKING',
-          color: '#FFCB05',
+          label: "STAKING",
+          color: "#FFCB05",
           items: [
-            'Network Ownership',
-            'DAO Ownership',
-            'Verfication Contribution',
+            "Network Ownership",
+            "DAO Ownership",
+            "Verfication Contribution",
           ],
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped lang="scss">

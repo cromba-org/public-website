@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <HeadingBlock class="title" :text="'Timeline'" />
+    <ZekHeading class="title" :text="'Timeline'" />
     <img class="image" src="../assets/timeline.svg" />
   </div>
 </template>
 
 <script>
-import HeadingBlock from "~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue";
+import { ZekHeading } from "@zekoder/zekoder-web-components";
 export default {
-    components: { HeadingBlock }
-}
+  components: { ZekHeading },
+};
 </script>
 
 <style scoped lang="scss">

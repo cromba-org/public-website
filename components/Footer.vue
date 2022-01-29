@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <HeadingBlock class="title" :text="'Follow Us:'" />
+      <ZekHeading class="title" :text="'Follow Us:'" />
       <div class="socials">
         <a
           v-for="(social, i) in socials"
@@ -10,7 +10,7 @@
           class="social-item"
         >
           <img :src="social.image" />
-          <HeadingBlock
+          <ZekHeading
             class="social-title"
             :heading-level="3"
             :text="social.title"
@@ -18,11 +18,11 @@
         </a>
       </div>
     </div>
-    <HeadingBlock
+    <ZekHeading
       class="copyright"
       :text="'Cromba is a social network project that uses blockchain among other technologies'"
     />
-    <HeadingBlock
+    <ZekHeading
       class="copyright-sub"
       :text="'2022 Comba. All rights reserved'"
     />
@@ -30,47 +30,47 @@
 </template>
 
 <script>
-import HeadingBlock from '~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue'
+import { ZekHeading } from "@zekoder/zekoder-web-components";
 export default {
-  name: 'FooterVue',
-  components: { HeadingBlock },
+  name: "FooterVue",
+  components: { ZekHeading },
   data() {
     return {
       socials: [
         {
-          title: 'Facebook',
-          image: require('../assets/facebook.svg'),
-          link: 'https://facebook.com',
+          title: "Facebook",
+          image: "../assets/facebook.svg",
+          link: "https://facebook.com",
         },
         {
-          title: 'Twitter',
-          image: require('../assets/twitter.svg'),
-          link: 'https://twitter.com',
+          title: "Twitter",
+          image: "../assets/twitter.svg",
+          link: "https://twitter.com",
         },
         {
-          title: 'Instagram',
-          image: require('../assets/instagramm.svg'),
-          link: 'https://instagram.com',
+          title: "Instagram",
+          image: "../assets/instagramm.svg",
+          link: "https://instagram.com",
         },
         {
-          title: 'Telegram',
-          image: require('../assets/telegramm.svg'),
-          link: 'https://telegram.com',
+          title: "Telegram",
+          image: "../assets/telegramm.svg",
+          link: "https://telegram.com",
         },
         {
-          title: 'Youtube',
-          image: require('../assets/youtube.svg'),
-          link: 'https://youtube.com',
+          title: "Youtube",
+          image: "../assets/youtube.svg",
+          link: "https://youtube.com",
         },
         {
-          title: 'Github',
-          image: require('../assets/mark-github.svg'),
-          link: 'https://github.com',
+          title: "Github",
+          image: "../assets/mark-github.svg",
+          link: "https://github.com",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -114,17 +114,17 @@ export default {
     }
   }
 }
-.copyright{
+.copyright {
   font-family: Raleway;
   font-size: 19px;
   color: white;
   margin-top: 20px;
   text-align: center;
 }
-.copyright-sub{
+.copyright-sub {
   font-family: Raleway;
   font-size: 16px;
-  color: #B6B6B6;
+  color: #b6b6b6;
   margin-top: 20px;
   text-align: center;
 }

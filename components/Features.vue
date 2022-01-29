@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <HeadingBlock class="title" :text="'Cromba Amazing Features'" />
-    <HeadingBlock
+    <ZekHeading class="title" :text="'Cromba Amazing Features'" />
+    <ZekHeading
       :heading-level="3"
       class="subtitle"
       :text="'Explore sensational features to that comes with cromba'"
@@ -12,8 +12,8 @@
           <img :src="card.image" />
         </div>
         <div class="card-content">
-          <HeadingBlock class="card-title" :text="card.title" />
-          <TextBlock class="card-desc" :text="card.text" />
+          <ZekHeading class="card-title" :text="card.title" />
+          <ZekText class="card-desc" :text="card.text" />
         </div>
       </div>
     </div>
@@ -21,38 +21,38 @@
 </template>
 
 <script>
-import HeadingBlock from '~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue'
-import TextBlock from '~/../zekoder-web-components/src/components/text-block/TextBlock.vue'
+import { ZekHeading, ZekText } from "@zekoder/zekoder-web-components";
+
 export default {
-  name: 'CrombaFeatures',
-  components: { HeadingBlock, TextBlock },
+  name: "CrombaFeatures",
+  components: { ZekHeading, ZekText },
   data() {
     return {
       cards: [
         {
-          image: require('../assets/feature-image-1.svg'),
-          title: 'Transparent',
-          text: 'A decentralized transparent social media policy that everyone knows the policy transparently.',
+          image: "../assets/feature-image-1.svg",
+          title: "Transparent",
+          text: "A decentralized transparent social media policy that everyone knows the policy transparently.",
         },
         {
-          image: require('../assets/feature-image-2.svg'),
-          title: 'Democratic',
-          text: 'Anyone can own or join any available social network.',
+          image: "../assets/feature-image-2.svg",
+          title: "Democratic",
+          text: "Anyone can own or join any available social network.",
         },
         {
-          image: require('../assets/feature-image-3.svg'),
-          title: 'Rewarding',
-          text: 'Supports a variety of the most popular digital currencies and always up to date.',
+          image: "../assets/feature-image-3.svg",
+          title: "Rewarding",
+          text: "Supports a variety of the most popular digital currencies and always up to date.",
         },
         {
-          image: require('../assets/feature-image-4.svg'),
-          title: 'Safe',
-          text: 'Users can move profiles between social networks.',
+          image: "../assets/feature-image-4.svg",
+          title: "Safe",
+          text: "Users can move profiles between social networks.",
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -63,7 +63,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../assets/bg-get-started.png');
+  background-image: url("../assets/bg-get-started.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

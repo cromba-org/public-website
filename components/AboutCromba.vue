@@ -2,16 +2,16 @@
   <div class="container">
     <div class="left-section">
       <div class="point">
-        <HeadingBlock class="title" :text="aboutCromba.label" />
-        <ListsBlock class="list" :list-items="aboutCromba.list" />
+        <ZekHeading class="title" :text="aboutCromba.label" />
+        <ZekList class="list" :list-items="aboutCromba.list" />
       </div>
       <div class="point">
-        <HeadingBlock class="title" :text="crombaActors.label" />
-        <ListsBlock class="list" :list-items="crombaActors.list" />
+        <ZekHeading class="title" :text="crombaActors.label" />
+        <ZekList class="list" :list-items="crombaActors.list" />
       </div>
       <div class="point">
-        <HeadingBlock class="title" :text="crombaSecurity.label" />
-        <ListsBlock class="list" :list-items="crombaSecurity.list" />
+        <ZekHeading class="title" :text="crombaSecurity.label" />
+        <ZekList class="list" :list-items="crombaSecurity.list" />
       </div>
     </div>
     <div class="right-section">
@@ -21,45 +21,45 @@
 </template>
 
 <script>
-import HeadingBlock from '~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue'
-import ListsBlock from '~/../zekoder-web-components/src/components/lists-block/ListsBlock.vue'
+import { ZekHeading, ZekList } from "@zekoder/zekoder-web-components";
+
 export default {
-  components: { HeadingBlock, ListsBlock },
+  components: { ZekHeading, ZekList },
   data() {
     return {
       aboutCromba: {
-        label: 'About Cromba',
+        label: "About Cromba",
         list: [
-          'Cromba is a modern transparent, secure, democratic and rewarding social network owned by users and managed decentrally.',
-          'To establish the ecosystem, ensure privacy, security and transparency. Cromba is backed by a blockchain.',
-          'P2P and other technologies collectively named Cromba network and relies on CRMB cryptocurrency for value transfer.',
+          "Cromba is a modern transparent, secure, democratic and rewarding social network owned by users and managed decentrally.",
+          "To establish the ecosystem, ensure privacy, security and transparency. Cromba is backed by a blockchain.",
+          "P2P and other technologies collectively named Cromba network and relies on CRMB cryptocurrency for value transfer.",
         ],
       },
       crombaActors: {
-        label: 'Cromba Actors',
+        label: "Cromba Actors",
         list: [
-          'Validator (miner)',
-          'DAO',
-          'General purpose',
-          'Network Operator',
-          'Infra provider',
-          'Contributor (the ordinary social network user)',
+          "Validator (miner)",
+          "DAO",
+          "General purpose",
+          "Network Operator",
+          "Infra provider",
+          "Contributor (the ordinary social network user)",
         ],
       },
       crombaSecurity: {
-        label: 'Cromba Security',
+        label: "Cromba Security",
         list: [
-          'No email/phone required for registration',
-          'Easy Blockchain based unbreakable login',
-          'No IP or Location tracing',
-          'Covert when used from mobile apps',
-          'Secure transactions using blockchain',
-          'Secure untraceable cryptocurrency',
+          "No email/phone required for registration",
+          "Easy Blockchain based unbreakable login",
+          "No IP or Location tracing",
+          "Covert when used from mobile apps",
+          "Secure transactions using blockchain",
+          "Secure untraceable cryptocurrency",
         ],
       },
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped lang="scss">

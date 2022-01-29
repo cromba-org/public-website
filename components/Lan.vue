@@ -2,8 +2,8 @@
   <div class="background">
     <div class="container">
       <div class="text-container">
-        <HeadingBlock class="title" :text="'LAN'" />
-        <TextBlock
+        <ZekHeading class="title" :text="'LAN'" />
+        <ZekText
           :text="'A big social media provider disclosed Lan’s IP address and other information to a government non tolerable for free speech, she needs a safer social not dependent on companies with government relations.'"
           class="text"
         />
@@ -13,17 +13,17 @@
 </template>
 
 <script>
-import HeadingBlock from '~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue'
-import TextBlock from '~/../zekoder-web-components/src/components/text-block/TextBlock.vue'
+import { ZekHeading, ZekText } from "@zekoder/zekoder-web-components";
+
 export default {
-  name: 'LanDetail',
-  components: { HeadingBlock, TextBlock },
-}
+  name: "LanDetail",
+  components: { ZekHeading, ZekText },
+};
 </script>
 
 <style scoped lang="scss">
 .background {
-  background-image: url('../assets/bg-features.png');
+  background-image: url("../assets/bg-features.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -32,7 +32,7 @@ export default {
 .container {
   width: 100%;
   text-align: center;
-  background-image: url('../assets/Lan.svg');
+  background-image: url("../assets/Lan.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -47,13 +47,13 @@ export default {
     justify-content: center;
     align-items: center;
     .title {
-      font-family: 'Josefin Sans';
+      font-family: "Josefin Sans";
       width: 66px;
       height: 48px;
       color: black;
     }
     .text {
-      font-family: 'Raleway';
+      font-family: "Raleway";
       color: black;
       width: 590px;
       line-height: 1.5;

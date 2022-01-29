@@ -1,24 +1,24 @@
 <template>
   <div class="container">
     <div class="left-section">
-      <HeadingBlock class="title" :text="'JOIN OUR COMMUNITY'" />
-      <HeadingBlock
+      <ZekHeading class="title" :text="'JOIN OUR COMMUNITY'" />
+      <ZekHeading
         class="subtitle"
         :heading-level="5"
         :text="'Simple and easy way to start your journey with us'"
       />
-      <ActionButton :label="'Whitepaper'" />
+      <ZekButton :label="'Whitepaper'" />
     </div>
     <div class="right-section">
-      <div v-for="(card,i) in cards" :key="i" class="card">
+      <div v-for="(card, i) in cards" :key="i" class="card">
         <img class="card-image" :src="card.image" />
         <div class="card-content">
-          <HeadingBlock
+          <ZekHeading
             class="card-title"
             :heading-level="3"
             :text="card.title"
           />
-          <TextBlock
+          <ZekText
             class="card-subtitle"
             :heading-level="3"
             :text="card.subtitle"
@@ -30,33 +30,32 @@
 </template>
 
 <script>
-import HeadingBlock from '~/../zekoder-web-components/src/components/heading-block/HeadingBlock.vue'
-import ActionButton from '~/../zekoder-web-components/src/components/action-button/ActionButton.vue'
-import TextBlock from '~/../zekoder-web-components/src/components/text-block/TextBlock.vue'
+import { ZekHeading, ZekText, ZekButton } from "@zekoder/zekoder-web-components";
+
 export default {
-  components: { HeadingBlock, ActionButton, TextBlock },
-  data(){
+  components: { ZekHeading, ZekButton, ZekText },
+  data() {
     return {
       cards: [
         {
-          image: require('../assets/get-started-icon-frame.svg'),
-          title: 'As a Developer',
-          subtitle: 'Your account and personal identity are guaranteed safe.',
+          image: "../assets/get-started-icon-frame.svg",
+          title: "As a Developer",
+          subtitle: "Your account and personal identity are guaranteed safe.",
         },
         {
-          image: require('../assets/get-started-icon-frame-2.svg'),
-          title: 'As a Partner',
-          subtitle: 'Join our community and invest in us',
+          image: "../assets/get-started-icon-frame-2.svg",
+          title: "As a Partner",
+          subtitle: "Join our community and invest in us",
         },
         {
-          image: require('../assets/get-started-icon-frame-3.svg'),
-          title: 'As an Early-Bird',
-          subtitle: 'Buy and sell popular currencies and keep track of them.',
+          image: "../assets/get-started-icon-frame-3.svg",
+          title: "As an Early-Bird",
+          subtitle: "Buy and sell popular currencies and keep track of them.",
         },
-      ]
-    }
-  }
-}
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -145,7 +144,7 @@ export default {
           font-family: Roboto;
           font-weight: 400;
           font-size: 16px;
-          color: #B6B6B6;
+          color: #b6b6b6;
           margin: 5px 0;
         }
       }

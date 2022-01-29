@@ -2,25 +2,25 @@
   <div class="nav">
     <img class="logo" src="../assets/logo-no-words.svg" />
     <div class="buttons">
-      <ActionButton class="button" :label="`Home`" />
-      <ActionButton class="button" :label="`About Us`" />
-      <ActionButton class="button" :label="`Features`" />
-      <ActionButton class="button" :label="`Our Team`" />
-      <ActionButton class="button" :label="`Timeline`" />
-      <ActionButton class="button" :label="`Ecosystem`" />
-      <ActionButton class="button" :label="`Contact Us`" />
+      <ZekButton class="button" :label="`Home`" />
+      <ZekButton class="button" :label="`About Us`" />
+      <ZekButton class="button" :label="`Features`" />
+      <ZekButton class="button" :label="`Our Team`" />
+      <ZekButton class="button" :label="`Timeline`" />
+      <ZekButton class="button" :label="`Ecosystem`" />
+      <ZekButton class="button" :label="`Contact Us`" />
     </div>
   </div>
 </template>
 
 <script>
-import ActionButton from '../../zekoder-web-components/src/components/action-button/ActionButton.vue'
+import { ZekButton } from "@zekoder/zekoder-web-components";
 export default {
-  name: 'NavBar',
+  name: "NavBar",
   components: {
-    ActionButton,
+    ZekButton,
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -52,7 +52,7 @@ export default {
       background-color: transparent;
       cursor: pointer;
       &:hover {
-        color: #A6CE39;
+        color: #a6ce39;
       }
     }
   }
