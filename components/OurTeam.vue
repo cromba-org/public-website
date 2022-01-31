@@ -3,7 +3,7 @@
     <div v-for="(card, i) in cards" :key="i" class="card">
       <img
         class="card-image"
-        :src="card.image"
+        :src="require(card.image)"
         :style="{ backgroundImage: `url('${card.background}')` }"
       />
       <ZekHeading class="card-title" :heading-level="3" :text="card.title" />

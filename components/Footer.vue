@@ -9,7 +9,7 @@
           :href="social.link"
           class="social-item"
         >
-          <img :src="social.image" />
+          <img :src="require(social.image)" />
           <ZekHeading
             class="social-title"
             :heading-level="3"

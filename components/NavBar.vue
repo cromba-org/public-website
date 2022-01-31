@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <img class="logo" src="../assets/logo-no-words.svg" />
+    <img class="logo" src="~/assets/logo-no-words.svg" />
     <div class="buttons">
       <ZekButton class="button" :label="`Home`" />
       <ZekButton class="button" :label="`About Us`" />

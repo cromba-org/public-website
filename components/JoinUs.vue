@@ -11,7 +11,7 @@
     </div>
     <div class="right-section">
       <div v-for="(card, i) in cards" :key="i" class="card">
-        <img class="card-image" :src="card.image" />
+        <img class="card-image" :src="require(card.image)" />
         <div class="card-content">
           <ZekHeading
             class="card-title"

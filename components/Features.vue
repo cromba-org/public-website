@@ -9,7 +9,7 @@
     <div class="cards">
       <div v-for="(card, i) in cards" :key="i" class="card">
         <div class="card-image">
-          <img :src="card.image" />
+          <img :src="require(card.image)" />
         </div>
         <div class="card-content">
           <ZekHeading class="card-title" :text="card.title" />
