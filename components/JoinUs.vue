@@ -11,7 +11,7 @@
     </div>
     <div class="right-section">
       <div v-for="(card, i) in cards" :key="i" class="card">
-        <img class="card-image" :src="require(card.image)" />
+        <img class="card-image" :src="card.image" />
         <div class="card-content">
           <ZekHeading
             class="card-title"
@@ -38,17 +38,17 @@ export default {
     return {
       cards: [
         {
-          image: "../assets/get-started-icon-frame.svg",
+          image: "~/assets/get-started-icon-frame.svg",
           title: "As a Developer",
           subtitle: "Your account and personal identity are guaranteed safe.",
         },
         {
-          image: "../assets/get-started-icon-frame-2.svg",
+          image: "~/assets/get-started-icon-frame-2.svg",
           title: "As a Partner",
           subtitle: "Join our community and invest in us",
         },
         {
-          image: "../assets/get-started-icon-frame-3.svg",
+          image: "~/assets/get-started-icon-frame-3.svg",
           title: "As an Early-Bird",
           subtitle: "Buy and sell popular currencies and keep track of them.",
         },

@@ -39,7 +39,7 @@ export default {
 
 <style scoped lang="scss">
 .container {
-  background-image: url("../assets/bg-above-the-fold.png");
+  background-image: url("~/assets/bg-above-the-fold.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
