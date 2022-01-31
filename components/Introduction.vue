@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="right-section">
-        <img src="../assets/logo.svg" />
+        <img src="~/assets/logo.svg"/>
       </div>
     </div>
   </div>
