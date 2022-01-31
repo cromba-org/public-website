@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="cromba-team">
     <div v-for="(card, i) in cards" :key="i" class="card">
       <img
         class="card-image"

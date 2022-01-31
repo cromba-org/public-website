@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="cromba-home">
     <NavBar />
     <div class="introduction">
       <div class="left-section">

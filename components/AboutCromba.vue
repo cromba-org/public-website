@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="about-cromba">
     <div class="left-section">
       <div class="point">
         <ZekHeading class="title" :text="aboutCromba.label" />

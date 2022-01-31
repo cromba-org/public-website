@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="join-us">
     <div class="left-section">
       <ZekHeading class="title" :text="'JOIN OUR COMMUNITY'" />
       <ZekHeading

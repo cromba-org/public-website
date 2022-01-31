@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="cromba-ecosystem">
     <ZekHeading class="title" :text="'Ecosystem'" />
     <div class="rows">
       <div v-for="(row, i) in rows" :key="i" class="row">

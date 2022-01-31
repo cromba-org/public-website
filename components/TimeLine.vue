@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="cromba-timeline">
     <ZekHeading class="title" :text="'Timeline'" />
     <img class="image" src="~/assets/timeline.svg" />
   </div>

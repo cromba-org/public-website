@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="cromba-features">
     <ZekHeading class="title" :text="'Cromba Amazing Features'" />
     <ZekHeading
       :heading-level="3"
