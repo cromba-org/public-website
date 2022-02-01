@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="cromba-home">
     <NavBar />
     <div class="introduction">
       <div class="left-section">
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="right-section">
-        <img src="~/assets/logo.svg"/>
+        <img src="/logo.svg"/>
       </div>
     </div>
   </div>
@@ -34,12 +34,17 @@ export default {
     ZekButton,
     ZekHeading,
   },
+  methods: {
+    getImage(image) {
+      return new URL(image, import.meta.url).href;
+    },
+  }
 };
 </script>
 
 <style scoped lang="scss">
 .container {
-  background-image: url("../assets/bg-above-the-fold.png");
+  background-image: url("~/assets/bg-above-the-fold.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

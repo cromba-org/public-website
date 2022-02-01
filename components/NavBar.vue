@@ -1,14 +1,14 @@
 <template>
   <div class="nav">
-    <img class="logo" src="~/assets/logo-no-words.svg" />
+    <img class="logo" src="/logo-no-words.svg" />
     <div class="buttons">
-      <ZekButton class="button" :label="`Home`" />
-      <ZekButton class="button" :label="`About Us`" />
-      <ZekButton class="button" :label="`Features`" />
-      <ZekButton class="button" :label="`Our Team`" />
-      <ZekButton class="button" :label="`Timeline`" />
-      <ZekButton class="button" :label="`Ecosystem`" />
-      <ZekButton class="button" :label="`Contact Us`" />
+      <a href="#cromba-home"><ZekButton class="button" :label="`Home`" /> </a>
+      <a href="#about-cromba"><ZekButton class="button" :label="`About Us`" /> </a>
+      <a href="#cromba-features"><ZekButton class="button" :label="`Features`" /> </a>
+      <a href="#cromba-team"><ZekButton class="button" :label="`Our Team`" /> </a>
+      <a href="#cromba-timeline"><ZekButton class="button" :label="`Timeline`" /> </a>
+      <a href="#cromba-ecosystem"><ZekButton class="button" :label="`Ecosystem`" /> </a>
+      <a href="#join-us"><ZekButton class="button" :label="`Contact Us`" /> </a>
     </div>
   </div>
 </template>
@@ -20,6 +20,11 @@ export default {
   components: {
     ZekButton,
   },
+  methods: {
+    getImage(image) {
+      return new URL(image, import.meta.url).href;
+    },
+  }
 };
 </script>
 

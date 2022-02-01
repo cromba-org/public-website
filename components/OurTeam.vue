@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <div class="container" id="cromba-team">
     <div v-for="(card, i) in cards" :key="i" class="card">
       <img
         class="card-image"
-        :src="require(card.image)"
-        :style="{ backgroundImage: `url('${card.background}')` }"
+        :src="card.image"
+        :style="{ backgroundImage: `url('card.background')` }"
       />
       <ZekHeading class="card-title" :heading-level="3" :text="card.title" />
       <ZekText class="card-subtitle" :heading-level="3" :text="card.subtitle" />
@@ -21,28 +21,33 @@ export default {
     return {
       cards: [
         {
-          image: "../assets/ahmed-sheleby.svg",
+          image: "/ahmed-sheleby.svg",
           title: "Ahmed Shalaby",
           subtitle:
             "20 years experience in technolgy nitch and also a co-founder of various firms in Canada, Us, Turkey and Egypt.",
-          background: "../assets/image-frame.svg",
+          background: "/image-frame.svg",
         },
         {
-          image: "../assets/mohamed-hany.svg",
+          image: "/mohamed-hany.svg",
           title: "Mohamed Hany",
           subtitle:
             "6 years experience as a DevOps and full stack software engineer",
-          background: "../assets/image-frame-2.svg",
+          background: "/image-frame-2.svg",
         },
         {
-          image: "../assets/mohamed-ali.svg",
+          image: "/mohamed-ali.svg",
           title: "Mohamed Ali",
           subtitle: "5 years experience in marketing and business development",
-          background: "../assets/image-frame-3.svg",
+          background: "/image-frame-3.svg",
         },
       ],
     };
   },
+  methods: {
+    getImage(image) {
+      return new URL(image, import.meta.url);
+    },
+  }
 };
 </script>
 

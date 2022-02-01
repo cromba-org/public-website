@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <ZekHeading class="title" :text="'Distribution Plan'" />
-    <img class="image" src="~/assets/distribution-plan.svg" />
+    <img class="image" src="/distribution-plan.svg" />
   </div>
 </template>
 
@@ -9,6 +9,11 @@
 import { ZekHeading } from "@zekoder/zekoder-web-components";
 export default {
   components: { ZekHeading },
+  methods: {
+    getImage(image) {
+      return new URL(image, import.meta.url).href;
+    },
+  }
 };
 </script>
 

@@ -23,7 +23,7 @@ export default {
 
 <style scoped lang="scss">
 .background {
-  background-image: url("../assets/bg-features.png");
+  background-image: url("~/assets/bg-features.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -32,7 +32,7 @@ export default {
 .container {
   width: 100%;
   text-align: center;
-  background-image: url("../assets/Lan.svg");
+  background-image: url("~/assets/Lan.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

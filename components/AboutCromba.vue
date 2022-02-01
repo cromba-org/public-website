@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="about-cromba">
     <div class="left-section">
       <div class="point">
         <ZekHeading class="title" :text="aboutCromba.label" />
@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="right-section">
-      <img src="~/assets/Features.svg" />
+      <img src="/Features.svg" />
     </div>
   </div>
 </template>
@@ -58,7 +58,7 @@ export default {
         ],
       },
     };
-  },
+  }
 };
 </script>
 
