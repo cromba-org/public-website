@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="right-section">
-      <img :src="getImage('../assets/Features.svg')" />
+      <img src="/Features.svg" />
     </div>
   </div>
 </template>
@@ -58,11 +58,6 @@ export default {
         ],
       },
     };
-  },
-  methods: {
-    getImage(image) {
-      return new URL(image, import.meta.url).href;
-    },
   }
 };
 </script>
