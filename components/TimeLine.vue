@@ -1,7 +1,7 @@
 <template>
   <div class="container" id="cromba-timeline">
     <ZekHeading class="title" :text="'Timeline'" />
-    <img class="image" src="~/assets/timeline.svg" />
+    <img class="image" :src="getImage('../assets/timeline.svg')" />
   </div>
 </template>
 
@@ -9,6 +9,11 @@
 import { ZekHeading } from "@zekoder/zekoder-web-components";
 export default {
   components: { ZekHeading },
+  methods: {
+    getImage(image) {
+      return new URL(image, import.meta.url).href;
+    },
+  }
 };
 </script>
 

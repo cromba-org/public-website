@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="right-section">
-        <img src="~/assets/logo.svg"/>
+        <img :src="getImage('../assets/logo.svg')"/>
       </div>
     </div>
   </div>
@@ -34,6 +34,11 @@ export default {
     ZekButton,
     ZekHeading,
   },
+  methods: {
+    getImage(image) {
+      return new URL(image, import.meta.url).href;
+    },
+  }
 };
 </script>
 
