@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="image-container">
-      <img class="image" :src="getImage('../assets/social-networks.svg')" />
+      <img class="image" src="/social-networks.svg" />
     </div>
   </div>
 </template>

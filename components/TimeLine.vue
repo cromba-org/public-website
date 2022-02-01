@@ -1,7 +1,7 @@
 <template>
   <div class="container" id="cromba-timeline">
     <ZekHeading class="title" :text="'Timeline'" />
-    <img class="image" :src="getImage('../assets/timeline.svg')" />
+    <img class="image" src="/timeline.svg" />
   </div>
 </template>
 

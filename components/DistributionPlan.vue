@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <ZekHeading class="title" :text="'Distribution Plan'" />
-    <img class="image" :src="getImage('../assets/distribution-plan.svg')" />
+    <img class="image" src="/distribution-plan.svg" />
   </div>
 </template>
 

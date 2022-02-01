@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="right-section">
-        <img :src="getImage('../assets/logo.svg')"/>
+        <img src="/logo.svg"/>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="nav">
-    <img class="logo" :src="getImage('../assets/logo-no-words.svg')" />
+    <img class="logo" src="/logo-no-words.svg" />
     <div class="buttons">
       <a href="#cromba-home"><ZekButton class="button" :label="`Home`" /> </a>
       <a href="#about-cromba"><ZekButton class="button" :label="`About Us`" /> </a>
