@@ -9,7 +9,7 @@
           :href="social.link"
           class="social-item"
         >
-          <img :src="social.image" />
+          <img :src="getImage(social.image)" />
           <ZekHeading
             class="social-title"
             :heading-level="3"
@@ -39,37 +39,42 @@ export default {
       socials: [
         {
           title: "Facebook",
-          image: "~/assets/facebook.svg",
+          image: "../assets/facebook.svg",
           link: "https://facebook.com",
         },
         {
           title: "Twitter",
-          image: "~/assets/twitter.svg",
+          image: "../assets/twitter.svg",
           link: "https://twitter.com",
         },
         {
           title: "Instagram",
-          image: "~/assets/instagramm.svg",
+          image: "../assets/instagramm.svg",
           link: "https://instagram.com",
         },
         {
           title: "Telegram",
-          image: "~/assets/telegramm.svg",
+          image: "../assets/telegramm.svg",
           link: "https://telegram.com",
         },
         {
           title: "Youtube",
-          image: "~/assets/youtube.svg",
+          image: "../assets/youtube.svg",
           link: "https://youtube.com",
         },
         {
           title: "Github",
-          image: "~/assets/mark-github.svg",
+          image: "../assets/mark-github.svg",
           link: "https://github.com",
         },
       ],
     };
   },
+  methods: {
+    getImage(image) {
+      return new URL(image, import.meta.url);
+    },
+  }
 };
 </script>
 
