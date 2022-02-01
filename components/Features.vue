@@ -9,7 +9,7 @@
     <div class="cards">
       <div v-for="(card, i) in cards" :key="i" class="card">
         <div class="card-image">
-          <img :src="card.image" />
+          <img :src="new URL(card.image, import.meta.url).href" />
         </div>
         <div class="card-content">
           <ZekHeading class="card-title" :text="card.title" />
@@ -30,7 +30,7 @@ export default {
     return {
       cards: [
         {
-          image: "~/assets/feature-image-1.svg",
+          image: "../assets/feature-image-1.svg",
           title: "Transparent",
           text: "A decentralized transparent social media policy that everyone knows the policy transparently.",
         },
