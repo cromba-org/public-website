@@ -1,7 +1,11 @@
+<script setup>
+  const menu = useState('menu', () => false);
+</script>
 <template>
   <div class="nav">
     <img class="logo" src="/logo-no-words.svg" />
-    <div class="buttons">
+    <img v-if="md.mobile()" src="~/assets/menu.svg" class="menu-button" @click="menu = !menu" />
+    <div class="buttons" v-else >
       <a href="#cromba-home"><ZekButton class="button" :label="`Home`" /> </a>
       <a href="#about-cromba"><ZekButton class="button" :label="`About Us`" /> </a>
       <a href="#cromba-features"><ZekButton class="button" :label="`Features`" /> </a>
@@ -15,37 +19,52 @@
 
 <script>
 import { ZekButton } from "@zekoder/zekoder-web-components";
+import MobileDetect from 'mobile-detect';
 export default {
   name: "NavBar",
   components: {
     ZekButton,
   },
+  data(){
+    return {
+      md: new MobileDetect(window.navigator.userAgent),
+    }
+  },
   methods: {
     getImage(image) {
       return new URL(image, import.meta.url).href;
     },
-  }
+  },
+  mounted() {
+    console.log(this.md.mobile())
+  },
 };
 </script>
 
 <style scoped lang="scss">
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
   height: 90px;
   width: 100%;
   max-width: 100vw;
   .logo {
     width: 150px;
     height: 100%;
-    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .menu-button {
+    width: 30px;
+    height: 100%;
+    padding: 0 20px;
+    cursor: pointer;
   }
   .buttons {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-right: 10%;
     .button {
       width: 100px;
       height: 40px;

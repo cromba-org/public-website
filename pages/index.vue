@@ -1,5 +1,10 @@
+<script setup>
+  const menu = useState('menu', () => false);
+</script>
+
 <template>
   <div id="app">
+    <MobileMenu v-if="menu" />
     <Introduction />
     <Lan />
     <AboutCromba />
@@ -26,6 +31,9 @@ export default {
 body {
   margin: 0;
   padding: 0;
+}
+html {
+   scroll-behavior: smooth;
 }
 #app {
   background-color: #11011e;
