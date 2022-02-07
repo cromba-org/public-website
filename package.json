@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@zekoder/zekoder-web-components": "^0.0.2",
+    "mobile-detect": "^1.4.5",
     "prettier": "^2.5.1"
   }
 }
