@@ -1,5 +1,10 @@
+<script setup>
+  const menu = useState('menu', () => false);
+</script>
+
 <template>
   <div id="app">
+    <MobileMenu v-if="menu" />
     <Introduction />
     <Lan />
     <AboutCromba />

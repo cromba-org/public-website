@@ -1,3 +1,6 @@
+<script setup>
+  const menu = useState('menu', () => false);
+</script>
 <template>
   <div class="nav">
     <img class="logo" src="/logo-no-words.svg" />
