@@ -32,6 +32,9 @@ body {
   margin: 0;
   padding: 0;
 }
+html {
+   scroll-behavior: smooth;
+}
 #app {
   background-color: #11011e;
   overflow: hidden;

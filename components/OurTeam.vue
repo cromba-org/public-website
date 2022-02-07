@@ -4,7 +4,7 @@
       <img
         class="card-image"
         :src="card.image"
-        :style="{ backgroundImage: `url('card.background')` }"
+        :style="{ backgroundImage: `url('${card.background}')` }"
       />
       <ZekHeading class="card-title" :heading-level="3" :text="card.title" />
       <ZekText class="card-subtitle" :heading-level="3" :text="card.subtitle" />
