@@ -14,6 +14,7 @@
         />
         <div class="buttons">
           <ZekButton :label="'WHITEPAPER'" />
+          &nbsp;
           <ZekButton :label="'CONTRACT'" />
         </div>
       </div>
@@ -78,11 +79,13 @@ export default {
       justify-content: center;
       align-items: center;
       padding: 0 100px;
+      text-align: left;
       .heading-block {
         font-family: Raleway;
         color: #ffffff;
         margin-bottom: 20px;
         font-weight: bold;
+        font-size: 40px;
       }
       .text-block {
         font-family: Roboto;
@@ -95,7 +98,7 @@ export default {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 50%;
+        width: 75%;
         .button {
           font-family: Roboto;
           font-weight: bold;
