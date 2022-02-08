@@ -30,52 +30,52 @@
 </template>
 
 <script>
-import { ZekHeading } from "@zekoder/zekoder-web-components";
+import { ZekHeading } from '@zekoder/zekoder-web-components'
 export default {
-  name: "FooterVue",
+  name: 'FooterVue',
   components: { ZekHeading },
   data() {
     return {
       socials: [
         {
-          title: "Facebook",
-          image: "/facebook.svg",
-          link: "https://facebook.com",
+          title: 'Facebook',
+          image: '/facebook.svg',
+          link: 'https://facebook.com',
         },
         {
-          title: "Twitter",
-          image: "/twitter.svg",
-          link: "https://twitter.com",
+          title: 'Twitter',
+          image: '/twitter.svg',
+          link: 'https://twitter.com',
         },
         {
-          title: "Instagram",
-          image: "/instagramm.svg",
-          link: "https://instagram.com",
+          title: 'Instagram',
+          image: '/instagramm.svg',
+          link: 'https://instagram.com',
         },
         {
-          title: "Telegram",
-          image: "/telegramm.svg",
-          link: "https://telegram.com",
+          title: 'Telegram',
+          image: '/telegramm.svg',
+          link: 'https://telegram.com',
         },
         {
-          title: "Youtube",
-          image: "/youtube.svg",
-          link: "https://youtube.com",
+          title: 'Youtube',
+          image: '/youtube.svg',
+          link: 'https://youtube.com',
         },
         {
-          title: "Github",
-          image: "/mark-github.svg",
-          link: "https://github.com",
+          title: 'Github',
+          image: '/mark-github.svg',
+          link: 'https://github.com',
         },
       ],
-    };
+    }
   },
   methods: {
     getImage(image) {
-      return new URL(image, import.meta.url);
+      return new URL(image, import.meta.url)
     },
-  }
-};
+  },
+}
 </script>
 
 <style scoped lang="scss">
@@ -91,6 +91,10 @@ export default {
     color: white;
     font-weight: 400;
     margin: 0;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      font-size: 4vw;
+      margin-top: 10px;
+    }
   }
   .socials {
     display: flex;
@@ -106,6 +110,9 @@ export default {
       justify-content: flex-start;
       align-items: center;
       height: 100%;
+      @media only screen and (hover: none) and (pointer: coarse) {
+        padding: 0 35%;
+      }
       img {
         width: 20px;
         height: 20px;
@@ -113,8 +120,14 @@ export default {
       .social-title {
         font-family: Raleway;
         font-size: 10px;
-        color: white;
+        color: #b6b6b6;
         margin-left: 10px;
+        text-transform: none;
+        @media only screen and (hover: none) and (pointer: coarse) {
+          font-size: 4vw;
+          padding: 0 15%;
+          margin: 2px;
+        }
       }
     }
   }
@@ -125,6 +138,10 @@ export default {
   color: white;
   margin-top: 20px;
   text-align: center;
+  @media only screen and (hover: none) and (pointer: coarse) {
+    font-size: 3vw;
+    padding: 0 15%;
+  }
 }
 .copyright-sub {
   font-family: Raleway;
@@ -132,5 +149,10 @@ export default {
   color: #b6b6b6;
   margin-top: 20px;
   text-align: center;
+  @media only screen and (hover: none) and (pointer: coarse) {
+    font-size: 3vw;
+    padding: 0 15%;
+    margin-top: 0;
+  }
 }
 </style>
