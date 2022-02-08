@@ -21,43 +21,43 @@
 </template>
 
 <script>
-import { ZekHeading, ZekText } from "@zekoder/zekoder-web-components";
+import { ZekHeading, ZekText } from '@zekoder/zekoder-web-components'
 
 export default {
-  name: "CrombaFeatures",
+  name: 'CrombaFeatures',
   components: { ZekHeading, ZekText },
   data() {
     return {
       cards: [
         {
-          image: "/feature-image-1.svg",
-          title: "Transparent",
-          text: "A decentralized transparent social media policy that everyone knows the policy transparently.",
+          image: '/feature-image-1.svg',
+          title: 'Transparent',
+          text: 'A decentralized transparent social media policy that everyone knows the policy transparently.',
         },
         {
-          image: "/feature-image-2.svg",
-          title: "Democratic",
-          text: "Anyone can own or join any available social network.",
+          image: '/feature-image-2.svg',
+          title: 'Democratic',
+          text: 'Anyone can own or join any available social network.',
         },
         {
-          image: "/feature-image-3.svg",
-          title: "Rewarding",
-          text: "Supports a variety of the most popular digital currencies and always up to date.",
+          image: '/feature-image-3.svg',
+          title: 'Rewarding',
+          text: 'Supports a variety of the most popular digital currencies and always up to date.',
         },
         {
-          image: "/feature-image-4.svg",
-          title: "Safe",
-          text: "Users can move profiles between social networks.",
+          image: '/feature-image-4.svg',
+          title: 'Safe',
+          text: 'Users can move profiles between social networks.',
         },
       ],
-    };
+    }
   },
   methods: {
     getImage(image) {
-      return new URL(image, import.meta.url).href;
+      return new URL(image, import.meta.url).href
     },
-  }
-};
+  },
+}
 </script>
 
 <style scoped lang="scss">
@@ -68,7 +68,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../assets/bg-get-started.png");
+  background-image: url('../assets/bg-get-started.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -76,12 +76,21 @@ export default {
     color: white;
     margin-bottom: 40px;
     font-family: Raleway;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      text-align: center;
+      font-size: 5vw;
+      margin-bottom: 0;
+    }
   }
   .subtitle {
-    color: white;
+    color: #B6B6B6;
     margin-bottom: 40px;
     font-family: Roboto;
     font-weight: 400;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      text-align: center;
+      font-size: 3vw;
+    }
   }
   .cards {
     display: flex;
@@ -91,6 +100,9 @@ export default {
     width: 100%;
     max-width: 1200px;
     margin-bottom: 40px;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      flex-direction: column;
+    }
     .card {
       font-family: Raleway;
       display: flex;
@@ -106,6 +118,11 @@ export default {
       box-sizing: border-box;
       backdrop-filter: blur(200px);
       border-radius: 18px;
+      @media only screen and (hover: none) and (pointer: coarse) {
+        width: 75%;
+        margin: 20px;
+        height: 50%;
+      }
 
       .card-image {
         width: 80px;
