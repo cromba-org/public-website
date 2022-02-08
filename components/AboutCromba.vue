@@ -15,18 +15,20 @@
       </div>
     </div>
     <div class="right-section">
-      <img src="/Features.svg" />
+      <img :src="md.mobile() ? '/Features-no-man.svg' : '/Features.svg'" />
     </div>
   </div>
 </template>
 
 <script>
+import MobileDetect from "mobile-detect";
 import { ZekHeading, ZekList } from "@zekoder/zekoder-web-components";
 
 export default {
   components: { ZekHeading, ZekList },
   data() {
     return {
+      md: new MobileDetect(window.navigator.userAgent),
       aboutCromba: {
         label: "About Cromba",
         list: [
@@ -66,21 +68,31 @@ export default {
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  @media only screen and (hover: none) and (pointer: coarse) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .left-section {
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 150px;
+    padding: 0 5%;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      width: 75%;
+      // padding-left: 5%;
+    }
     .title {
       color: white;
       font-family: Raleway;
       font-size: 27px;
+      @media only screen and (hover: none) and (pointer: coarse) {
+        font-size: 3vw;
+      }
     }
 
     .list {
@@ -88,15 +100,25 @@ export default {
       font-family: Raleway;
       font-weight: 400;
       font-size: 27px;
+      @media only screen and (hover: none) and (pointer: coarse) {
+        font-size: 3vw;
+      }
     }
   }
   .right-section {
     width: 50%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 150px;
+    padding: 0 5%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    @media only screen and (hover: none) and (pointer: coarse) {
+      width: 75%;
+      padding: 5%;
+    }
   }
 }
 </style>
