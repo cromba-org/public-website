@@ -12,45 +12,51 @@
           :line-breaks="2"
           class="text-block"
         />
-        <div class="buttons">
-          <ZekButton :label="'WHITEPAPER'" />
+        <a class="buttons">
+          <ZekButton :label="'WHITEPAPER'" :url="'https://docs.google.com/document/d/1eVtp4VGARtySsDcZ1UFwq06pCPlV2Cs7A9k1diRobjo/edit?usp=sharing'"/>
           &nbsp;
           <ZekButton :label="'CONTRACT'" />
-        </div>
+        </a>
       </div>
       <div class="right-section">
-        <img src="/logo.svg"/>
+        <img src="/logo.svg" v-if="!md.mobile()" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ZekHeading, ZekText, ZekButton } from "@zekoder/zekoder-web-components";
+import { ZekHeading, ZekText, ZekButton } from '@zekoder/zekoder-web-components'
+import MobileDetect from 'mobile-detect';
 
 export default {
-  name: "IntroductionBlock",
+  name: 'IntroductionBlock',
   components: {
     ZekText,
     ZekButton,
     ZekHeading,
   },
+  data(){
+    return {
+      md: new MobileDetect(window.navigator.userAgent),
+    }
+  },
   methods: {
     getImage(image) {
-      return new URL(image, import.meta.url).href;
+      return new URL(image, import.meta.url).href
     },
-  }
-};
+  },
+}
 </script>
 
 <style scoped lang="scss">
 .container {
-  background-image: url("~/assets/bg-above-the-fold.png");
+  background-image: url('~/assets/bg-above-the-fold.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 900px;
   width: 100%;
+
   .introduction {
     display: flex;
     flex-direction: row;
@@ -58,6 +64,9 @@ export default {
     align-items: center;
     width: 100%;
     height: 100%;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      flex-direction: column;
+    }
     .right-section {
       width: 50%;
       height: 100%;
@@ -80,18 +89,28 @@ export default {
       align-items: center;
       padding: 0 100px;
       text-align: left;
+      @media only screen and (hover: none) and (pointer: coarse) {
+        width: 75%;
+        text-align: center;
+      }
       .heading-block {
         font-family: Raleway;
         color: #ffffff;
         margin-bottom: 20px;
         font-weight: bold;
         font-size: 40px;
+        @media only screen and (hover: none) and (pointer: coarse) {
+          font-size: 4vw;
+        }
       }
       .text-block {
         font-family: Roboto;
         color: #ffffff;
         font-size: 20px;
         font-weight: 400;
+        @media only screen and (hover: none) and (pointer: coarse) {
+          font-size: 3vw;
+        }
       }
       .buttons {
         margin: 20px 0;
@@ -99,6 +118,9 @@ export default {
         justify-content: space-around;
         align-items: center;
         width: 75%;
+        @media only screen and (hover: none) and (pointer: coarse) {
+          width: 100%;
+        }
         .button {
           font-family: Roboto;
           font-weight: bold;
@@ -110,6 +132,7 @@ export default {
           border: 1.5px solid #ffffff;
           box-sizing: border-box;
           border-radius: 12px;
+          cursor: pointer;
         }
       }
     }

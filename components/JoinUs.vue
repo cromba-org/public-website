@@ -7,7 +7,10 @@
         :heading-level="5"
         :text="'Simple and easy way to start your journey with us'"
       />
-      <ZekButton :label="'Whitepaper'" />
+      <ZekButton
+        :label="'Whitepaper'"
+        :url="'https://docs.google.com/document/d/1eVtp4VGARtySsDcZ1UFwq06pCPlV2Cs7A9k1diRobjo/edit?usp=sharing'"
+      />
     </div>
     <div class="right-section">
       <div v-for="(card, i) in cards" :key="i" class="card">
@@ -30,7 +33,7 @@
 </template>
 
 <script>
-import { ZekHeading, ZekText, ZekButton } from "@zekoder/zekoder-web-components";
+import { ZekHeading, ZekText, ZekButton } from '@zekoder/zekoder-web-components'
 
 export default {
   components: { ZekHeading, ZekButton, ZekText },
@@ -38,29 +41,29 @@ export default {
     return {
       cards: [
         {
-          image: "/get-started-icon-frame.svg",
-          title: "As a Developer",
-          subtitle: "Your account and personal identity are guaranteed safe.",
+          image: '/get-started-icon-frame.svg',
+          title: 'As a Developer',
+          subtitle: 'Your account and personal identity are guaranteed safe.',
         },
         {
-          image: "/get-started-icon-frame-2.svg",
-          title: "As a Partner",
-          subtitle: "Join our community and invest in us",
+          image: '/get-started-icon-frame-2.svg',
+          title: 'As a Partner',
+          subtitle: 'Join our community and invest in us',
         },
         {
-          image: "/get-started-icon-frame-3.svg",
-          title: "As an Early-Bird",
-          subtitle: "Buy and sell popular currencies and keep track of them.",
+          image: '/get-started-icon-frame-3.svg',
+          title: 'As an Early-Bird',
+          subtitle: 'Buy and sell popular currencies and keep track of them.',
         },
       ],
-    };
+    }
   },
   methods: {
     getImage(image) {
-      return new URL(image, import.meta.url);
+      return new URL(image, import.meta.url)
     },
-  }
-};
+  },
+}
 </script>
 
 <style scoped lang="scss">
@@ -72,6 +75,10 @@ export default {
   width: 100%;
   height: 100%;
   margin: 20px 0;
+  @media only screen and (hover: none) and (pointer: coarse) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .left-section {
     width: 50%;
     height: 100%;
@@ -80,11 +87,19 @@ export default {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0 100px;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      font-size: 4vw;
+      padding: 0 3vw;
+    }
     .title {
       font-family: Raleway;
       font-size: 36px;
       color: white;
       margin-bottom: 40px;
+      @media only screen and (hover: none) and (pointer: coarse) {
+        font-size: 4vw;
+        margin-bottom: 0;
+      }
     }
     .subtitle {
       font-family: Raleway;
@@ -92,6 +107,9 @@ export default {
       font-size: 18px;
       color: white;
       margin-bottom: 40px;
+      @media only screen and (hover: none) and (pointer: coarse) {
+        font-size: 3vw;
+      }
     }
     .button {
       font-family: Raleway;
@@ -104,6 +122,7 @@ export default {
       border: 1.5px solid #ffffff;
       box-sizing: border-box;
       border-radius: 12px;
+      cursor: pointer;
     }
   }
   .right-section {
@@ -114,6 +133,11 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 0 100px;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      padding: 0 3vw;
+      width: calc(100% - 6vw);
+      margin-top: 5vh;
+    }
     .card {
       padding: 10px 52px 20px 20px;
       width: 100%;
@@ -144,6 +168,9 @@ export default {
           color: white;
           font-weight: 600;
           margin: 5px 0;
+          @media only screen and (hover: none) and (pointer: coarse) {
+            font-size: 4vw;
+          }
         }
         .card-subtitle {
           font-family: Roboto;
@@ -151,6 +178,9 @@ export default {
           font-size: 16px;
           color: #b6b6b6;
           margin: 5px 0;
+          @media only screen and (hover: none) and (pointer: coarse) {
+            font-size: 3vw;
+          }
         }
       }
     }

@@ -2,11 +2,11 @@
   <div class="background">
     <div class="container">
       <div class="text-container">
-        <ZekHeading class="title" :text="'LAN'" />
+        <!-- <ZekHeading class="title" :text="'LAN'" />
         <ZekText
           :text="'A big social media provider disclosed Lan’s IP address and other information to a government non tolerable for free speech, she needs a safer social not dependent on companies with government relations.'"
           class="text"
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -32,12 +32,15 @@ export default {
 .container {
   width: 100%;
   text-align: center;
-  background-image: url("~/assets/Lan.svg");
+  background-image: url("~/assets/lan.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   background-position-x: 48%;
-  height: 1058px;
+  height: 100vh;
+  @media only screen and (hover: none) and (pointer: coarse) {
+    height: 50vh;
+  }
   .text-container {
     width: 100%;
     height: 100%;

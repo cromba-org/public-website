@@ -6,15 +6,15 @@
 </template>
 
 <script>
-import { ZekHeading } from "@zekoder/zekoder-web-components";
+import { ZekHeading } from '@zekoder/zekoder-web-components'
 export default {
   components: { ZekHeading },
   methods: {
     getImage(image) {
-      return new URL(image, import.meta.url).href;
+      return new URL(image, import.meta.url).href
     },
-  }
-};
+  },
+}
 </script>
 
 <style scoped lang="scss">
@@ -24,12 +24,15 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 50px;
+  margin: 3vw;
   .title {
     font-family: Raleway;
     font-size: 36px;
     color: white;
     margin-bottom: 40px;
+    @media only screen and (max-width: 768px) {
+      font-size: 4vw;
+    }
   }
   .image {
     width: 100%;

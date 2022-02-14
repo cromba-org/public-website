@@ -1,5 +1,5 @@
 <script setup>
-  const menu = useState('menu', () => false);
+const menu = useState('menu', () => false)
 </script>
 
 <template>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    name: "IndexPage",
+  name: 'IndexPage',
 }
 </script>
 
@@ -33,7 +33,7 @@ body {
   padding: 0;
 }
 html {
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 #app {
   background-color: #11011e;

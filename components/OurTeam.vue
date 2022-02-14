@@ -1,4 +1,5 @@
 <template>
+  <ZekHeading class="title" :text="'OUR TEAM'" />
   <div class="container" id="cromba-team">
     <div v-for="(card, i) in cards" :key="i" class="card">
       <img
@@ -13,7 +14,7 @@
 </template>
 
 <script>
-import { ZekHeading, ZekText } from "@zekoder/zekoder-web-components";
+import { ZekHeading, ZekText } from '@zekoder/zekoder-web-components'
 
 export default {
   components: { ZekHeading, ZekText },
@@ -21,40 +22,54 @@ export default {
     return {
       cards: [
         {
-          image: "/ahmed-sheleby.svg",
-          title: "Ahmed Shalaby",
+          image: '/ahmed-sheleby.svg',
+          title: 'Ahmed Shalaby',
           subtitle:
-            "20 years experience in technolgy nitch and also a co-founder of various firms in Canada, Us, Turkey and Egypt.",
-          background: "/image-frame.svg",
+            '20 years experience in technolgy nitch and also a co-founder of various firms in Canada, Us, Turkey and Egypt.',
+          background: '/image-frame.svg',
         },
+        // {
+        //   image: "/mohamed-hany.svg",
+        //   title: "Mohamed Hany",
+        //   subtitle:
+        //     "6 years experience as a DevOps and full stack software engineer",
+        //   background: "/image-frame-2.svg",
+        // },
         {
-          image: "/mohamed-hany.svg",
-          title: "Mohamed Hany",
-          subtitle:
-            "6 years experience as a DevOps and full stack software engineer",
-          background: "/image-frame-2.svg",
-        },
-        {
-          image: "/mohamed-ali.svg",
-          title: "Mohamed Ali",
-          subtitle: "5 years experience in marketing and business development",
-          background: "/image-frame-3.svg",
+          image: '/mohamed-ali.svg',
+          title: 'Mohamed Ali',
+          subtitle: '5 years experience in marketing and business development',
+          background: '/image-frame-3.svg',
         },
       ],
-    };
+    }
   },
   methods: {
     getImage(image) {
-      return new URL(image, import.meta.url);
+      return new URL(image, import.meta.url)
     },
-  }
-};
+  },
+}
 </script>
 
 <style lang="scss" scoped>
+.title {
+  font-family: Raleway;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 40px;
+  text-align: center;
+    @media only screen and (hover: none) and (pointer: coarse) {
+    font-size: 4vw;
+  }
+}
 .container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  @media only screen and (hover: none) and (pointer: coarse) {
+    flex-direction: column;
+  }
   .card {
     text-align: center;
     display: flex;
@@ -67,6 +82,10 @@ export default {
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      width: calc(100% - 6vw);
+      margin: 3vw;
+    }
     .card-image {
       background-repeat: no-repeat;
       background-size: 73%;

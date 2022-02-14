@@ -20,52 +20,52 @@
 </template>
 
 <script>
-import { ZekHeading } from "@zekoder/zekoder-web-components";
+import { ZekHeading } from '@zekoder/zekoder-web-components'
 export default {
   components: { ZekHeading },
   data() {
     return {
       rows: [
         {
-          label: "EARN",
-          color: "#a6ce39",
+          label: 'EARN',
+          color: '#a6ce39',
           items: [
-            "Appreciated Owned Content",
-            "Social Network Enriching Activities",
-            "Verification (mining)",
-            "Digital Product Sales",
-            "Infrastructure Provision",
-            "Crypto Exchange",
+            'Appreciated Owned Content',
+            'Social Network Enriching Activities',
+            'Verification (mining)',
+            'Digital Product Sales',
+            'Infrastructure Provision',
+            'Crypto Exchange',
           ],
         },
         {
-          label: "SPEND",
-          color: "#00AEEF",
+          label: 'SPEND',
+          color: '#00AEEF',
           items: [
-            "Content Application",
-            "Infrastructure Utilization",
-            "Advertisment",
-            "Digital Product Purchase",
+            'Content Application',
+            'Infrastructure Utilization',
+            'Advertisment',
+            'Digital Product Purchase',
           ],
         },
         {
-          label: "STAKING",
-          color: "#FFCB05",
+          label: 'STAKING',
+          color: '#FFCB05',
           items: [
-            "Network Ownership",
-            "DAO Ownership",
-            "Verfication Contribution",
+            'Network Ownership',
+            'DAO Ownership',
+            'Verfication Contribution',
           ],
         },
       ],
-    };
+    }
   },
   methods: {
     getImage(image) {
-      return new URL(image, import.meta.url).href;
+      return new URL(image, import.meta.url).href
     },
-  }
-};
+  },
+}
 </script>
 
 <style scoped lang="scss">
@@ -77,13 +77,20 @@ export default {
     font-family: Raleway;
     font-size: 36px;
     color: white;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      font-size: 4vw;
+    }
   }
   .rows {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
     .row {
       display: flex;
       flex-direction: row;
@@ -93,12 +100,22 @@ export default {
       width: 100%;
       padding: 0 50px;
       margin: 20px 0;
+      @media only screen and (hover: none) and (pointer: coarse) {
+        flex-direction: column;
+        width: 25%;
+        padding: 0 3%;
+      }
       .row-title {
         font-family: Raleway;
         font-size: 24px;
         color: white;
         transform: rotate(-90deg);
         width: 100px;
+        @media only screen and (hover: none) and (pointer: coarse) {
+          transform: rotate(0deg);
+          font-size: 3vw;
+          width: 100%;
+        }
       }
       .row-item {
         width: calc((100% - 220px) / 7);
@@ -111,19 +128,28 @@ export default {
         justify-content: center;
         align-items: center;
         margin: 0 10px;
+        @media only screen and (hover: none) and (pointer: coarse) {
+          width: 100%;
+          height: 15vh;
+          margin: 10px 0;
+        }
         .item-text {
           font-family: Raleway;
           font-size: 18px;
           color: #a6ce39;
           padding: 20px;
+          @media only screen and (hover: none) and (pointer: coarse) {
+            font-size: 3vw;
+            text-align: left;
+          }
         }
       }
     }
   }
   .image-container {
-    margin: 100px;
+    margin: 5vw;
     .image {
-      margin-top: 50px;
+      margin-top: 5vh;
       width: 100%;
       height: 100%;
     }
